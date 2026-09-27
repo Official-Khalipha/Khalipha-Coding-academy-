@@ -1,0 +1,1006 @@
+/* =========================
+   GLOBAL
+========================= */
+* {margin: 0;padding: 0;box-sizing: border-box;}
+html {scroll-behavior: smooth;}
+body {font-family: Arial, sans-serif;background: #fdfcf5;color: #0d2e1a;line-height: 1.6;}
+img {max-width: 100%;display: block;}
+a {text-decoration: none;}
+button,input,textarea {font: inherit;}
+
+/* =========================
+   NAVBAR
+========================= */
+.top-header {position: sticky;top: 0;z-index: 1000;width: 100%;background: #0d2e1a;}
+.navbar {max-width: 1200px;min-height: 80px;margin: auto;padding: 10px 20px;display: flex;align-items: center;justify-content: space-between;gap: 20px;}
+.logo {display: flex;align-items: center;gap: 10px;color: #c9a227;font-size: 20px;font-weight: bold;}
+.logo img {width: 55px;height: 55px;object-fit: contain;}
+.nav-links {display: flex;align-items: center;gap: 30px;list-style: none;}
+.nav-links a {color: white;font-size: 16px;font-weight: 500;transition: .3s ease;}
+.nav-links a:hover {color: #c9a227;}
+.login-btn {padding: 10px 20px;border-radius: 6px;background: #c9a227;color: #0d2e1a;font-weight: bold;}
+.menu-btn {display: none;border: none;background: transparent;color: white;font-size: 30px;cursor: pointer;}
+
+/* =========================
+   SECTION HEADING
+========================= */
+.section-heading {max-width: 700px;margin: 0 auto 60px;text-align: center;}
+.section-heading p,
+.section-label {margin-bottom: 12px;color: #c9a227;font-weight: bold;letter-spacing: 2px;}
+.section-heading h2 {margin-bottom: 15px;font-size: 42px;line-height: 1.2;}
+.section-heading span {color: #666;}
+
+/* =========================
+   HERO
+========================= */
+.hero {max-width: 1200px;min-height: calc(100vh - 80px);margin: auto;padding: 80px 20px;display: flex;align-items: center;justify-content: space-between;gap: 60px;}
+.hero-content {flex: 1;max-width: 600px;}
+.hero-subtitle {margin-bottom: 15px;color: #c9a227;font-size: 18px;font-weight: bold;}
+.hero h1 {margin-bottom: 25px;color: #0d2e1a;font-size: clamp(42px, 6vw, 72px);line-height: 1.1;}
+.hero-text {max-width: 550px;margin-bottom: 30px;color: #555;font-size: 18px;line-height: 1.7;}
+.hero-buttons {display: flex;align-items: center;gap: 15px;flex-wrap: wrap;}
+.btn {display: inline-block;padding: 14px 26px;border-radius: 6px;font-weight: bold;transition: .3s ease;}
+.primary-btn {background: #0d2e1a;color: white;}
+.primary-btn:hover {background: #c9a227;color: #0d2e1a;}
+.secondary-btn {border: 2px solid #0d2e1a;color: #0d2e1a;}
+.secondary-btn:hover {background: #0d2e1a;color: white;}
+.hero-image {flex: 1;display: flex;justify-content: center;align-items: center;}
+.hero-image img {width: 100%;max-width: 500px;height: auto;object-fit: contain;}
+
+/* =========================
+   COURSES
+========================= */
+.courses-section {padding: 100px 20px;background: white;}
+.courses-container {max-width: 1200px;margin: auto;display: grid;grid-template-columns: repeat(4, 1fr);gap: 25px;}
+.course-card {overflow: hidden;border: 1px solid #e8e8e8;border-radius: 12px;background: #fdfcf5;transition: .3s ease;}
+.course-card:hover {transform: translateY(-8px);box-shadow: 0 15px 35px rgba(0,0,0,.1);}
+.course-card img {width: 100%;height: 180px;padding: 25px;object-fit: contain;}
+.course-content {padding: 20px;}
+.course-content h3 {margin-bottom: 10px;color: #0d2e1a;font-size: 24px;}
+.course-content p {margin-bottom: 20px;color: #666;}
+.course-btn {display: inline-block;padding: 10px 18px;border-radius: 5px;background: #0d2e1a;color: white;font-weight: bold;transition: .3s ease;}
+.course-btn:hover {background: #c9a227;color: #0d2e1a;}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+.why-section {padding: 100px 20px;background: #fdfcf5;}
+.why-container {max-width: 1100px;margin: auto;display: grid;grid-template-columns: repeat(4, 1fr);gap: 25px;}
+.why-card {padding: 30px;border: 1px solid #eee;border-radius: 12px;background: white;text-align: center;transition: .3s ease;}
+.why-card:hover {transform: translateY(-8px);box-shadow: 0 15px 35px rgba(0,0,0,.08);}
+.why-icon {width: 55px;height: 55px;margin: 0 auto 20px;display: flex;align-items: center;justify-content: center;border-radius: 50%;background: #0d2e1a;color: #c9a227;font-weight: bold;}
+.why-card h3 {margin-bottom: 12px;color: #0d2e1a;}
+.why-card p {color: #666;}
+
+/* =========================
+   ABOUT
+========================= */
+.about-section {max-width: 1200px;margin: auto;padding: 100px 20px;display: flex;align-items: center;gap: 70px;}
+.about-image,.about-content {flex: 1;}
+.about-image img {width: 100%;max-width: 500px;margin: auto;object-fit: contain;}
+.about-content h2 {margin-bottom: 25px;color: #0d2e1a;font-size: 42px;line-height: 1.2;}
+.about-content p {margin-bottom: 18px;color: #666;}
+.about-btn {display: inline-block;margin-top: 10px;padding: 13px 25px;border-radius: 6px;background: #0d2e1a;color: white;font-weight: bold;transition: .3s ease;}
+.about-btn:hover {background: #c9a227;color: #0d2e1a;}
+
+
+/* =========================
+   CTA
+========================= */
+.cta-section {padding: 100px 20px;background: #0d2e1a;text-align: center;}
+.cta-content {max-width: 750px;margin: auto;}
+.cta-content p {margin-bottom: 15px;color: #c9a227;font-weight: bold;letter-spacing: 2px;}
+.cta-content h2 {margin-bottom: 15px;color: white;font-size: 44px;line-height: 1.2;}
+.cta-content span {display: block;margin-bottom: 30px;color: #ddd;}
+.cta-btn {display: inline-block;padding: 14px 28px;border-radius: 6px;background: #c9a227;color: #0d2e1a;font-weight: bold;transition: .3s ease;}
+.cta-btn:hover {background: white;}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-section {padding: 100px 20px;background: white;}
+.contact-container {max-width: 1100px;margin: auto;display: grid;grid-template-columns: 1fr 1fr;gap: 60px;}
+.contact-info h3 {margin-bottom: 15px;color: #0d2e1a;font-size: 30px;}
+.contact-info > p {margin-bottom: 30px;color: #666;}
+.contact-item {display: flex;flex-direction: column;gap: 5px;margin-bottom: 20px;}
+.contact-item strong {color: #0d2e1a;}
+.contact-item span {color: #666;}
+.contact-form {display: flex;flex-direction: column;gap: 15px;}
+.contact-form input,
+.contact-form textarea {width: 100%;padding: 14px;border: 1px solid #ddd;border-radius: 6px;outline: none;font: inherit;}
+.contact-form input:focus,
+.contact-form textarea:focus {border-color: #c9a227;}
+.contact-form textarea {resize: vertical;}
+.contact-form button {padding: 14px;border: none;border-radius: 6px;background: #0d2e1a;color: white;font-weight: bold;cursor: pointer;transition: .3s ease;}
+.contact-form button:hover {background: #c9a227;color: #0d2e1a;}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {padding-top: 50px;background: #071b10;color: white;}
+.footer-container {max-width: 1100px;margin: auto;padding: 0 20px 40px;display: flex;justify-content: space-between;align-items: flex-start;gap: 40px;}
+.footer-brand h3 {margin-bottom: 10px;color: #c9a227;}
+.footer-brand p {color: #bbb;}
+.footer-links {display: flex;flex-wrap: wrap;gap: 25px;}
+.footer-links a {color: #ddd;transition: .3s ease;}
+.footer-links a:hover {color: #c9a227;}
+.copyright {padding: 20px;border-top: 1px solid rgba(255,255,255,0.1);color: #aaa;font-size: 14px;text-align: center;}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1000px) {
+    .navbar {padding: 10px 25px;}
+    .nav-links {gap: 20px;}
+    .hero {gap: 35px;padding: 60px 25px;}
+    .hero h1 {font-size: 52px;}
+    .hero-text {font-size: 17px;}
+    .hero-image img {max-width: 420px;}
+    .courses-section {padding: 80px 25px;}
+    .courses-container {grid-template-columns: repeat(2, 1fr);}
+    .why-section {padding: 80px 25px;}
+    .why-container {grid-template-columns: repeat(2, 1fr);}
+    .about-section {gap: 40px;padding: 80px 25px;}
+    .about-content h2 {font-size: 36px;}
+    .cta-section {padding: 80px 25px;}
+    .cta-content h2 {font-size: 40px;}
+    .contact-section {padding: 80px 25px;}
+    .contact-container {gap: 40px;}
+    .footer-container {padding-left: 25px;padding-right: 25px;}
+    .section-heading {margin-bottom: 50px;}
+    .section-heading h2 {font-size: 38px;}
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {flex-wrap: wrap;}
+    .menu-btn {display: block;}
+    .nav-links {display: none;width: 100%;order: 3;flex-direction: column;align-items: center;gap: 15px;padding: 15px 0;}
+    .nav-links.active {display: flex;}
+
+    /* Hero */
+    .hero {min-height: auto;padding: 60px 20px;flex-direction: column;text-align: center;}
+    .hero-content {max-width: 100%;}
+    .hero-subtitle {font-size: 16px;}
+    .hero h1 {font-size: 44px;}
+    .hero-text {margin-left: auto;margin-right: auto;font-size: 16px;}
+    .hero-buttons {justify-content: center;}
+    .hero-image {width: 100%;}
+    .hero-image img {max-width: 380px;}
+
+    /* Courses */
+    .courses-section {padding: 70px 20px}
+    .courses-container {grid-template-columns: 1fr;max-width: 500px;}
+    .course-card img {height: 200px;}
+
+    /* Why */
+    .why-section {padding: 70px 20px;}
+    .why-container {grid-template-columns: 1fr;max-width: 500px;}
+    
+    /* About */
+    .about-section {flex-direction: column;gap: 40px;padding: 70px 20px;text-align: center;}
+    .about-image {width: 100%;}
+    .about-image img {max-width: 450px;}
+    .about-content h2 {font-size: 34px;}
+
+    /* CTA */
+    .cta-section {padding: 70px 20px;}
+    .cta-content h2 {font-size: 36px;}
+    .cta-content span {font-size: 16px;}
+
+    /* Contact */
+    .contact-section {padding: 70px 20px;}
+    .contact-container {grid-template-columns: 1fr;gap: 40px;max-width: 600px;}
+    .contact-info {text-align: center;}
+
+    /* Footer */
+    .footer-container {flex-direction: column;align-items: center;text-align: center;gap: 25px}
+    .footer-links {justify-content: center;}
+
+    /* Section Heading */
+    .section-heading {margin-bottom: 40px;}
+    .section-heading h2 {font-size: 34px;}
+}
+
+/* =========================
+   SMALL PHONE
+========================= */
+@media (max-width: 480px) {
+    .navbar {padding: 10px 15px;}
+    .logo {font-size: 17px;}
+    .logo img {width: 48px;height: 48px;}
+    .menu-btn {font-size: 27px;}
+    .login-btn {padding: 8px 14px;font-size: 14px;}
+    /* Hero */
+    .hero {padding: 45px 15px;}
+    .hero-subtitle {font-size: 14px;}
+    .hero h1 {font-size: 36px;}
+    .hero-text {font-size: 15px;}
+    .hero-buttons {flex-direction: column;width: 100%;}
+    .btn {width: 100%;text-align: center;}
+    .hero-image img {max-width: 300px;}
+    /* Courses */
+    .courses-section {padding: 60px 15px;}
+    .course-card img {height: 170px;padding: 20px;}
+    .course-content {padding: 18px;}
+    .course-content h3 {font-size: 22px;}
+    /* Why */
+    .why-section {padding: 60px 15px;}
+    .why-card {padding: 25px 20px;}
+    /* About */
+    .about-section {padding: 60px 15px;}
+    .about-content h2 {font-size: 30px;}
+    .about-content p {font-size: 15px;}
+    .about-btn {width: 100%;}
+    /* CTA */
+    .cta-section {padding: 60px 15px;}
+    .cta-content h2 {font-size: 30px;}
+    .cta-content p {font-size: 14px;}
+    .cta-content span {font-size: 15px;}
+    .cta-btn {width: 100%;}
+    /* Contact */
+    .contact-section {padding: 60px 15px;}
+    .contact-container {gap: 30px;}
+    .contact-info h3 {font-size: 26px;}
+    .contact-form input,
+    .contact-form textarea {padding: 12px;}
+    .contact-form button {width: 100%;}
+    /* Footer */
+    .footer {padding-top: 40px;}
+    .footer-container {padding: 0 15px 30px;}
+    .footer-links {gap: 15px;}
+    .copyright {padding: 15px;font-size: 13px;}
+    /* Section Heading */
+    .section-heading {margin-bottom: 35px;}
+    .section-heading p,
+    .section-label {font-size: 14px;}
+    .section-heading h2 {font-size: 30px;}
+    .section-heading span {font-size: 15px;}
+}
+
+@media (max-width: 768px) {
+    .nav-links {display: none !important;}
+    .nav-links.active {display: flex !important;}
+}
+
+/* =========================
+   LOGIN SECTION
+========================= */
+.login-section {min-height: 70vh;padding: 80px 20px;display: flex;align-items: center;justify-content: center;background: #fdfcf5;}
+.login-container {width: 100%;max-width: 450px;padding: 40px;border: 1px solid #eee;border-radius: 12px;background: white;box-shadow: 0 15px 35px rgba(0,0,0,.08);text-align: center;}
+.login-container h2 {margin-bottom: 10px;color: #0d2e1a;font-size: 32px;}
+.login-container > p {margin-bottom: 30px;color: #666;}
+.login-form {display: flex;flex-direction: column;gap: 15px;}
+.login-form input {width: 100%;padding: 14px;border: 1px solid #ddd;border-radius: 6px;outline: none;}
+.login-form input:focus {border-color: #c9a227;}
+.login-form button {padding: 14px;border: none;border-radius: 6px;background: #0d2e1a;color: white;font-weight: bold;cursor: pointer;transition: .3s ease;}
+.login-form button:hover {background: #c9a227;color: #0d2e1a;}
+/* =========================
+   LOGIN MOBILE
+========================= */
+@media (max-width: 480px) {
+    .login-section {padding: 60px 15px;}
+    .login-container {padding: 30px 20px;}
+    .login-container h2 {font-size: 28px;}
+}
+
+/* =========================
+   COURSE DETAILS
+========================= */
+.course-details {padding: 80px 20px;background: #fdfcf5;}
+.course-details-container {max-width: 900px;margin: auto;padding: 40px;background: white;border-radius: 15px;box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);}
+.course-details-container h2 {margin-bottom: 15px;color: #0d2e1a;}
+.course-details-container h3 {margin-top: 25px;margin-bottom: 10px;}
+.course-details-container ul {padding-left: 20px;margin-bottom: 25px;}
+.course-details-container li {margin-bottom: 8px;}
+
+/* =========================
+   SMOOTH SCROLLING
+========================= */
+html {scroll-behavior: smooth;}
+
+/* =========================
+   SCROLL OFFSET
+========================= */
+section {scroll-margin-top: 80px;}
+
+/* =========================
+   BACK TO TOP
+========================= */
+#back-to-top {position: fixed;right: 20px;bottom: 20px;width: 45px;height: 45px;border: none;border-radius: 50%;background: #c9a227;color: #0d2e1a;font-size: 24px;font-weight: bold;cursor: pointer;display: none;align-items: center;justify-content: center;z-index: 9999;box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);}
+#back-to-top:hover {background: #0d2e1a;color: white;}
+
+/* =========================
+   DARK MODE BUTTON
+========================= */
+.dark-mode-btn {border: none;background: transparent;color: white;font-size: 22px;cursor: pointer;}
+body.dark-mode {background: #121212;color: white;}
+body.dark-mode .courses-section,
+body.dark-mode .contact-section,
+body.dark-mode .course-details {background: #121212;}
+body.dark-mode .course-card,
+body.dark-mode .course-details-container,
+body.dark-mode .contact-form-container {background: #1e1e1e;}
+body.dark-mode .section-heading h2,
+body.dark-mode .course-card h3,
+body.dark-mode .course-details-container h2,
+body.dark-mode .contact-info h3 {color: white;}
+body.dark-mode .course-card p,
+body.dark-mode .section-heading span,
+body.dark-mode .contact-info > p {color: #ccc;}
+
+/* =========================
+   COURSE CARD ANIMATION
+   ========================= */
+.course-card {transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.course-card:hover {transform: translateY(-8px);box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);}
+
+/* =========================
+   BUTTON ANIMATION
+   ========================= */
+.course-btn,
+.cta-btn,
+.contact-form button,
+.login-btn {transition: transform 0.3s ease, background 0.3s ease;}
+
+.course-btn:hover,
+.cta-btn:hover,
+.contact-form button:hover,
+.login-btn:hover {transform: translateY(-3px);}
+
+/* =========================
+   PAGE ENTRANCE ANIMATION: yana sanya class na kasa fadeup
+   ========================= */
+.hero-content,
+.hero-image,
+.section-heading,
+.course-card,
+.about-content,
+.about-image,
+.contact-info,
+.contact-form-container,
+.cta-content {animation: fadeUp 0.8s ease both;}
+
+@keyframes fadeUp {
+    from {opacity: 0;transform: translateY(30px);}
+    to {opacity: 1;transform: translateY(0);}
+}
+
+/* =========================
+   ANIMATION DELAY: wannan zaisa fade up na sama da akayi delay wajen faruwa
+   ========================= */
+.course-card:nth-child(1) {animation-delay: 0.1s;}
+.course-card:nth-child(2) {animation-delay: 0.3s;}
+.course-card:nth-child(3) {animation-delay: 0.5s;}
+.course-card:nth-child(4) {animation-delay: 0.7s;}
+
+/* =========================
+   SCROLL REVEAL ANIMATION: zaisa scroll su shigo a hankali
+   ========================= */
+.scroll-reveal {opacity: 0;transform: translateY(40px);transition: opacity 0.7s ease, transform 0.7s ease;}
+.scroll-reveal.show {opacity: 1;transform: translateY(0);}
+
+/* =========================
+   IMAGE HOVER ANIMATION: hotuna su danyi zoom idan mause ya hau kansu
+   ========================= */
+.course-card img {transition: transform 0.4s ease;}
+.course-card:hover img {transform: scale(1.08);}
+
+/* =========================
+   STAGGERED COURSE ANIMATION: zasu sa cards su shigo 1 by 1
+   ========================= */
+.course-card:nth-child(1) {transition-delay: 0.1s;}
+.course-card:nth-child(2) {transition-delay: 0.2s;}
+.course-card:nth-child(3) {transition-delay: 0.3s;}
+.course-card:nth-child(4) {transition-delay: 0.4s;}
+
+/* =========================
+   NAVBAR LINK ANIMATION: idan mause yaje kan navs gold line zai fito ƙasansa
+   ========================= */
+.nav-links a {position: relative;transition: color 0.3s ease;}
+.nav-links a::after {content: "";position: absolute;left: 0;bottom: -6px;width: 0;height: 2px;background: #c9a227;transition: width 0.3s ease;}
+.nav-links a:hover {color: #c9a227;}
+.nav-links a:hover::after {width: 100%;}
+
+/* =========================
+   HERO STAGGERED ANIMATION: yanasa h1 da p da image su shigo a hankali
+   ========================= */
+.hero-content h1 {animation: heroFade 0.8s ease both;}
+.hero-content p {animation: heroFade 0.8s ease 0.2s both;}
+.hero-content .hero-buttons {animation: heroFade 0.8s ease 0.4s both;}
+.hero-image {animation: heroFade 0.8s ease 0.3s both;}
+
+@keyframes heroFade {
+    from {opacity: 0;transform: translateY(25px);}
+    to {opacity: 1;transform: translateY(0);}
+}
+
+/* =========================
+   CTA FLOATING ANIMATION: yanasa CTA ya dan yi motsi sama da kasa a hankali
+   ========================= */
+.cta-content {animation: floating 3s ease-in-out infinite;}
+
+@keyframes floating {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-6px);}
+    100% {transform: translateY(0);}
+}
+
+/* =========================
+   PULSE ANIMATION: yanasa Explore courses na CTA su riƙa dan girma kadan suna komawa yadda suke
+   ========================= */
+.cta-btn {animation: pulse 2s ease-in-out infinite;}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+/* =========================
+   IMAGE ROTATE + SCALE: in ka danna hoto ya dan juya ya kara girma kadan
+   ========================= */
+.course-card img {transition: transform 0.4s ease;}
+.course-card:hover img {transform: scale(1.08) rotate(2deg);}
+
+/* =========================
+   LOGO HOVER ANIMATION: idan an taba logo ya ɗan juya ya ƙara girma
+   ========================= */
+.logo img {transition: transform 0.4s ease;}
+.logo:hover img {transform: scale(1.08) rotate(-3deg);}
+
+/* =========================
+   NAVBAR LINK SLIDE: Navbar su ɗan matsa kaɗan idan an taɓa su
+   ========================= */
+.nav-links a {display: inline-block;transition: transform 0.3s ease;}
+.nav-links a:hover {transform: translateX(5px);}
+
+/* =========================
+   ANIMATION DIRECTION: zaisa animation idan ya faru to ya dawo da reverse, ba ya sake daga farko ba, sai ya zama kamar yana floating.
+   ========================= */
+.hero-image {animation: heroFloat 3s ease-in-out infinite alternate;}
+@keyframes heroFloat {
+    from {transform: translateY(0);}
+    to {transform: translateY(-10px);}
+}
+
+/* =========================
+   ANIMATION ITERATION COUNT: zai kayyade sau nawa animation zai faru sai ya tsaya.
+   ========================= */
+.logo img {
+    animation-name: logoMove;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 3;
+}
+
+@keyframes logoMove {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}
+/* =========================
+   ANIMATION ITERATION COUNT: gajerar hanyar da ake rubutashi.
+   ========================= */
+.logo img {animation: logoMove 2s ease 1;}
+
+@keyframes logoMove {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}
+
+/* =========================
+   ANIMATION TIMING FUNCTION: yanayin yadda animation zai faru, linear:baiɗaya ko ease ko ease-in ko ease-out ko kuma ease-in-out.
+   ========================= */
+.hero-image {
+    animation-name: heroFloat;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heroFloat {
+    from {transform: translateY(0);}
+    to {transform: translateY(-10px);}
+}
+
+/* =========================
+   ANIMATION PLAY STATE: yana sanya animation tsayawa idan mause ya hau kai, idan ya sauka ya cigaba.
+   ========================= */
+.cta-content {animation: floating 3s ease-in-out infinite;}
+
+/* Tsayar da animation idan an dora mouse */
+.cta-content:hover {animation-play-state: paused;}
+
+/* =========================
+   TRANSITION TIMING FUNCTION: yana sanya yadda transition zai motsa.
+   ========================= */
+.course-btn {
+    transition-property: transform, background;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.course-btn:hover {transform: translateY(-5px);background: #c9a227;}
+
+/* =========================
+   TRANSITION PROPERTY: yana baka damar zaɓar abinda transition zai sarrafa.
+   ========================= */
+.course-btn {transition-property: background, transform;transition-duration: 0.4s;}
+.course-btn:hover {background: #c9a227;transform: translateY(-5px);}
+
+/* =========================
+   INPUT FOCUS TRANSITION: idan aka danna input to wannan css yayi aiki akan input din da aka taɓa, focus kenan.
+   ========================= */
+.contact-form input,
+.contact-form textarea,
+.login-form input {border: 1px solid #ddd;transition: border-color 0.3s ease, box-shadow 0.3s ease;}
+/* =========================
+   LOKACIN DA USER YA Danna INPUT: css kasa yayi aiki.
+   ========================= */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.login-form input:focus {border-color: #c9a227;box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);outline: none;}
+
+/* =========================
+   BUTTON ACTIVE EFFECT: idan an danna button zai ɗan rage girman button kaɗan.
+   ========================= */
+.course-btn:active {transform: scale(0.95);}
+
+/* =========================
+   REGISTER SECTION
+   ========================= */
+.register-section {min-height: 100vh;padding: 100px 20px;background: #fdfcf5;display: flex;justify-content: center;align-items: center;}
+
+/* =========================
+   REGISTER CONTAINER
+   ========================= */
+.register-container {width: 100%;max-width: 450px;padding: 35px;background: white;border-radius: 12px;box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);}
+
+/* =========================
+   REGISTER HEADING
+   ========================= */
+.register-container h2 {margin-bottom: 10px;color: #0d2e1a;text-align: center;}
+.register-container > p {margin-bottom: 30px;color: #777;text-align: center;}
+
+/* =========================
+   FORM GROUP
+   ========================= */
+.form-group {margin-bottom: 20px;}
+.form-group label {display: block;margin-bottom: 7px;font-weight: bold;color: #0d2e1a;}
+
+/* =========================
+   INPUTS
+   ========================= */
+.form-group input {width: 100%;padding: 13px;border: 1px solid #ddd;border-radius: 6px;font-size: 16px;outline: none;transition: 0.3s ease;}
+.form-group input:focus {border-color: #c9a227;box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);}
+
+/* =========================
+   REGISTER BUTTON
+   ========================= */
+.register-btn {width: 100%;padding: 14px;border: none;border-radius: 6px;background: #0d2e1a;color: white;font-size: 16px;font-weight: bold;cursor: pointer;transition: 0.3s ease;}
+.register-btn:hover {background: #c9a227;color: #0d2e1a;}
+
+/* =========================
+   LOGIN TEXT
+   ========================= */
+.login-text {margin-top: 25px;font-size: 14px;}
+.login-text a {color: #c9a227;font-weight: bold;}
+
+/* =========================
+   LOGOUT BUTTON
+   ========================= */
+.logout-btn {width: 100%;margin-top: 15px;padding: 13px;border: none;border-radius: 6px;background: #c9a227;color: #0d2e1a;font-size: 16px;font-weight: bold;cursor: pointer;}
+.logout-btn:hover {background: #0d2e1a;color: white;}
+
+/* =========================
+   STUDENT DASHBOARD
+   ========================= */
+.dashboard-section {min-height: 100vh;padding: 120px 20px 60px;background: #fdfcf5;}
+
+/* =========================
+   DASHBOARD CONTAINER
+   ========================= */
+.dashboard-container {width: 100%;max-width: 1100px;margin: auto;}
+
+/* =========================
+   DASHBOARD HEADER
+   ========================= */
+.dashboard-header {display: flex;justify-content: space-between;align-items: center;gap: 20px;margin-bottom: 40px;}
+.dashboard-label {color: #c9a227;font-weight: bold;}
+.dashboard-header h2 {color: #0d2e1a;margin: 8px 0;}
+.dashboard-header p {color: #777;}
+
+/* =========================
+   DASHBOARD LOGOUT
+   ========================= */
+.dashboard-logout {padding: 12px 22px;border: none;border-radius: 6px;background: #0d2e1a;color: white;font-weight: bold;cursor: pointer;}
+.dashboard-logout:hover {background: #c9a227;color: #0d2e1a;}
+
+/* =========================
+   STUDENT INFORMATION
+   ========================= */
+.student-info {display: grid;grid-template-columns: repeat(3, 1fr);gap: 20px;margin-bottom: 50px;}
+.info-card {padding: 25px;background: white;border-radius: 12px;box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);}
+.info-card span {font-size: 28px;}
+.info-card h3 {margin: 15px 0 8px;color: #0d2e1a;}
+.info-card p {color: #777;}
+
+/* =========================
+   MY COURSES
+   ========================= */
+.my-courses h2 {margin-bottom: 20px;color: #0d2e1a;}
+.dashboard-courses {display: grid;grid-template-columns: repeat(3, 1fr);gap: 20px;}
+.dashboard-course-card {padding: 25px;background: white;border-radius: 12px;box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);transition: 0.3s ease;}
+.dashboard-course-card:hover {transform: translateY(-5px);}
+.dashboard-course-card h3 {color: #0d2e1a;}
+.dashboard-course-card p {color: #777;margin: 12px 0 20px;}
+.dashboard-course-card span {color: #c9a227;font-weight: bold;}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+    .dashboard-header {flex-direction: column;align-items: flex-start;}
+    .student-info {grid-template-columns: 1fr;}
+    .dashboard-courses {grid-template-columns: 1fr;}
+}
+
+/* =========================
+   DASHBOARD DEFAULT
+   ========================= */
+#dashboard-section {display: none;}
+
+/* =========================
+   COURSE PROGRESS
+   ========================= */
+.course-progress {margin-top: 50px;}
+.course-progress h2 {color: #0d2e1a;margin-bottom: 20px;}
+.progress-card {background: white;padding: 25px;border-radius: 12px;box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);}
+.progress-item {margin-bottom: 25px;}
+.progress-item:last-child {margin-bottom: 0;}
+/* Sunan course da percentage */
+.progress-info {display: flex;justify-content: space-between;margin-bottom: 8px;font-weight: bold;color: #0d2e1a;}
+/* Wurin progress bar */
+.progress-bar {width: 100%;height: 10px;background: #eee;border-radius: 10px;overflow: hidden;}
+/* Cikawar progress */
+.progress-fill {height: 100%;background: #c9a227;border-radius: 10px;}
+
+/* =========================
+   HTML COURSE LESSONS
+   ========================= */
+.course-lessons {margin-top: 50px;}
+.course-lessons h2 {color: #0d2e1a;margin-bottom: 8px;}
+.lessons-intro {color: #777;margin-bottom: 25px;}
+/* =========================
+   LESSON CARD
+   ========================= */
+.lesson-card {display: flex;align-items: center;gap: 20px;padding: 20px;margin-bottom: 15px;background: white;border-radius: 12px;box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);transition: 0.3s ease;}
+.lesson-card:hover {transform: translateY(-3px);}
+/* =========================
+   LESSON NUMBER
+   ========================= */
+.lesson-number {min-width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background: #0d2e1a;color: #c9a227;border-radius: 50%;font-weight: bold;}
+/* =========================
+   LESSON CONTENT
+   ========================= */
+.lesson-content {flex: 1;}
+.lesson-content h3 {color: #0d2e1a;margin-bottom: 6px;}
+.lesson-content p {color: #777;}
+/* =========================
+   LESSON BUTTON
+   ========================= */
+.lesson-btn {padding: 10px 18px;border: none;border-radius: 6px;background: #c9a227;color: #0d2e1a;font-weight: bold;cursor: pointer;}
+.lesson-btn:hover {background: #0d2e1a;color: white;}
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+    .lesson-card {align-items: flex-start;flex-wrap: wrap;}
+    .lesson-content {min-width: 200px;}
+    .lesson-btn {width: 100%;}
+}
+
+/* =========================
+   LESSON CONTENT BOX
+   ========================= */
+.lesson-content-box {display: none;margin-top: 25px;padding: 25px;background: white;border-radius: 12px;box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);}
+.lesson-content-box h2 {color: #0d2e1a;margin-bottom: 15px;}
+.lesson-content-box h3 {color: #0d2e1a;margin-top: 20px;margin-bottom: 10px;}
+.lesson-content-box p,.lesson-content-box li {color: #555;line-height: 1.7;}
+.lesson-content-box ul {padding-left: 20px;}
+
+/* =========================
+   LESSON LABEL
+   ========================= */
+.lesson-label {color: #c9a227;font-size: 13px;font-weight: bold;margin-bottom: 8px;}
+/* =========================
+   LESSON CODE EXAMPLE
+   ========================= */
+.lesson-content-box pre {background: #0d2e1a;color: white;padding: 18px;border-radius: 8px;overflow-x: auto;margin: 15px 0 25px;}
+.lesson-content-box code {font-family: monospace;line-height: 1.6;}
+/* =========================
+   LESSON LIST
+   ========================= */
+.lesson-content-box li {margin-bottom: 8px;}
+/* =========================
+   COMPLETE LESSON BUTTON
+   ========================= */
+.complete-lesson-btn {width: 100%;margin-top: 25px;padding: 14px;border: none;border-radius: 7px;background: #0d2e1a;color: white;font-size: 16px;font-weight: bold;cursor: pointer;}
+.complete-lesson-btn:hover {background: #c9a227;color: #0d2e1a;}
+
+/* =========================
+   HTML QUIZ
+   ========================= */
+.quiz-section {width: 100%;margin-top: 50px;padding: 25px;background: white;border-radius: 12px;box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);box-sizing: border-box;}
+/* =========================
+   QUIZ TITLE
+   ========================= */
+.quiz-section h2 {color: #0d2e1a;margin-bottom: 10px;}
+.quiz-section > p {color: #777;margin-bottom: 25px;}
+/* =========================
+   QUIZ QUESTION
+   ========================= */
+.quiz-question {margin-bottom: 30px;}
+.quiz-question h3 {color: #0d2e1a;margin-bottom: 15px;}
+/* =========================
+   ANSWER OPTIONS
+   ========================= */
+.quiz-question label {display: block;padding: 12px 15px;margin-bottom: 10px;background: #f7f7f7;border-radius: 7px;color: #444;cursor: pointer;transition: 0.3s ease;}
+.quiz-question label:hover {background: #f0e5b8;}
+.quiz-question input {margin-right: 8px;}
+/* =========================
+   QUIZ RESULT
+   ========================= */
+.quiz-result {margin-top: 20px;padding: 15px;border-radius: 7px;font-weight: bold;text-align: center;}
+/* =========================
+   MOBILE QUIZ
+   ========================= */
+@media (max-width: 768px) {
+    .quiz-section {padding: 20px;}
+    .quiz-question h3 {font-size: 17px;}
+}
+/* =========================
+   CSS COURSE SECTION
+   ========================= */
+.css-course-section {width: 100%;margin-top: 60px;}
+/* =========================
+   CSS COURSE TITLE
+   ========================= */
+.css-course-section >
+.course-lessons > h2 {color: #0d2e1a;margin-bottom: 8px;}
+/* =========================
+   CSS COURSE DARK MODE
+   ========================= */
+body.dark-mode .css-course-section .lesson-content-box,
+body.dark-mode .css-course-section .lesson-card {background: #1b1b1b;}
+body.dark-mode .css-course-section h2,
+body.dark-mode .css-course-section h3 {color: #c9a227;}
+body.dark-mode .css-course-section p,
+body.dark-mode .css-course-section li {color: #ddd;}
+
+/* =========================
+   JAVASCRIPT COURSE
+   ========================= */
+.js-course-section { padding: 60px 20px; background: #fdfcf5; }
+.js-course-section > h2 { color: #0d2e1a; margin-bottom: 10px; }
+.js-course-section > p { color: #777; margin-bottom: 30px; }
+
+.js-course-section .lesson-card { max-width: 900px; margin: 0 auto 25px; padding: 25px; background: white; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.js-course-section .lesson-card h3 { color: #0d2e1a; margin-bottom: 10px; }
+.js-course-section .lesson-card p { color: #666; line-height: 1.7; }
+
+.js-course-section .lesson-content { display: none; margin-top: 20px; padding: 20px; background: #f8f8f8; border-radius: 8px; }
+.js-course-section .lesson-content h4 { color: #0d2e1a; margin-bottom: 10px; }
+
+.js-course-section pre { overflow-x: auto; padding: 15px; background: #0d2e1a; color: white; border-radius: 8px; margin: 15px 0; }
+
+.js-course-section .start-lesson-btn { margin-top: 15px; padding: 10px 18px; border: none; border-radius: 6px; background: #0d2e1a; color: white; cursor: pointer; }
+.js-course-section .start-lesson-btn:hover { background: #c9a227; color: #0d2e1a; }
+
+.js-course-section .complete-lesson-btn { margin-top: 15px; padding: 10px 18px; border: none; border-radius: 6px; background: #c9a227; color: #0d2e1a; font-weight: bold; cursor: pointer; }
+.js-course-section .complete-lesson-btn:hover { background: #0d2e1a; color: white; }
+
+/* =========================
+   DARK MODE
+   ========================= */
+body.dark-mode .js-course-section { background: #111; }
+body.dark-mode .js-course-section .lesson-card { background: #1c1c1c; }
+body.dark-mode .js-course-section .lesson-card h3,
+body.dark-mode .js-course-section .lesson-content h4 { color: #c9a227; }
+body.dark-mode .js-course-section .lesson-card p { color: #ccc; }
+body.dark-mode .js-course-section .lesson-content { background: #252525; }
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+    .js-course-section { padding: 50px 15px; }
+    .js-course-section .lesson-card { padding: 20px; }
+}
+
+/* =========================
+   CERTIFICATE STATUS
+   ========================= */
+.certificate-status { margin-top: 50px; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: center; }
+.certificate-status h2 { color: #0d2e1a; margin-bottom: 10px; }
+.certificate-status p { color: #777; margin-bottom: 20px; }
+
+/* ============================================================
+   PROFESSIONAL CERTIFICATE
+   ============================================================ */
+.certificate { display:none; width:100%; max-width:950px; min-height:650px; margin:40px auto; padding:70px; box-sizing:border-box; position:relative; background:#fff; border:12px solid #0d2e1a; outline:3px solid #c9a227; outline-offset:-25px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.15); }
+.certificate::before { content:""; position:absolute; inset:15px; border:2px solid #c9a227; pointer-events:none; }
+.certificate-academy { margin:0 0 15px; color:#c9a227; font-size:20px; font-weight:bold; letter-spacing:3px; }
+.certificate h1 { margin:10px 0; color:#0d2e1a; font-size:42px; }
+.certificate-line { width:120px; height:4px; margin:20px auto 30px; background:#c9a227; border-radius:5px; }
+.certificate-presented { margin:0 0 15px; color:#777; font-size:17px; }
+#certificate-name { margin:10px 0 20px; color:#0d2e1a; font-size:38px; font-family:Georgia,serif; }
+.certificate-description { color:#777; margin:0 0 10px; }
+.certificate h3 { margin:10px 0; color:#c9a227; font-size:28px; }
+.certificate-courses { color:#0d2e1a; font-weight:bold; font-size:17px; letter-spacing:2px; }
+.certificate-achievement { max-width:650px; margin:20px auto; color:#666; line-height:1.6; }
+.certificate-date { margin-top:25px; color:#555; }
+.certificate-id { margin-top:8px; color:#777; font-size:14px; }
+.certificate-signatures { display:flex; justify-content:space-around; gap:60px; margin-top:55px; }
+.signature-box { width:220px; text-align:center; }
+.signature-line { height:1px; margin-bottom:8px; background:#0d2e1a; }
+.signature-box p { margin:5px 0; color:#0d2e1a; font-weight:bold; }
+.signature-box small { color:#777; }
+.certificate-actions { display:flex; justify-content:center; gap:15px; margin:25px auto 50px; }
+#generate-certificate,#print-certificate { margin:0; }
+
+/* =========================
+   MOBILE CERTIFICATE
+   ========================= */
+@media (max-width:768px) {
+    .certificate { min-height:600px; padding:55px 25px; border-width:8px; }
+    .certificate h1 { font-size:30px; }
+    #certificate-name { font-size:28px; }
+    .certificate-academy { font-size:15px; letter-spacing:2px; }
+    .certificate-signatures { flex-direction:column; align-items:center; gap:30px; margin-top:40px; }
+    .certificate-actions { flex-direction:column; align-items:center; }
+    #generate-certificate,#print-certificate { width:100%; max-width:300px; }
+}
+
+/* ============================================================
+   PRINT CERTIFICATE
+   ============================================================ */
+@media print {
+    body * { visibility:hidden; }
+    #certificate,#certificate * { visibility:visible; }
+    #certificate { display:block !important; position:absolute; left:0; top:0; width:100%; max-width:none; margin:0; box-shadow:none; }
+    .certificate-actions { display:none !important; }
+}
+
+/* =========================
+   CERTIFICATE VERIFICATION
+   ========================= */
+.verification-section { padding: 60px 20px; background: #fdfcf5; text-align: center; }
+.verification-section h2 { color: #0d2e1a; margin-bottom: 10px; }
+.verification-section > p { color: #777; }
+.verification-box { max-width: 500px; margin: 25px auto; display: flex; gap: 10px; }
+#verify-certificate-id { flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 6px; outline: none; }
+#verify-certificate-id:focus { border-color: #c9a227; }
+.verification-result { max-width: 500px; margin: 20px auto; padding: 20px; border-radius: 8px; }
+
+/* =========================
+   CERTIFICATE SIGNATURES
+   ========================= */
+.certificate-signatures { display: flex; justify-content: space-around; gap: 50px; margin-top: 50px; }
+.signature-box { width: 220px; text-align: center; }
+.signature-line { border-top: 2px solid #0d2e1a; margin-bottom: 8px; }
+.signature-box p { margin: 0; color: #0d2e1a; font-weight: bold; }
+.signature-box small { color: #777; }
+@media (max-width: 768px) {
+    .certificate-signatures { flex-direction: column; align-items: center; gap: 30px; }
+}
+
+/* =========================
+   ADMIN LOGIN
+   ========================= */
+.admin-login-section { min-height: 100vh; padding: 120px 20px 60px; background: #fdfcf5; display: flex; justify-content: center; align-items: center; }
+.admin-login-box { width: 100%; max-width: 450px; padding: 35px; background: white; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: center; }
+.admin-login-box h2 { color: #0d2e1a; margin: 10px 0; }
+.admin-login-box > p { color: #777; }
+#admin-login-form { margin-top: 25px; }
+#admin-login-form input { width: 100%; padding: 13px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; outline: none; box-sizing: border-box; }
+#admin-login-form input:focus { border-color: #c9a227; }
+#admin-login-form button { width: 100%; }
+#admin-login-message { margin-top: 15px; font-weight: bold; }
+
+@media (max-width: 768px) {
+    .admin-login-section { padding: 100px 15px 40px; }
+    .admin-login-box { padding: 25px 20px; }
+}
+
+/* =========================
+   ADMIN DASHBOARD
+   ========================= */
+.admin-dashboard-section { min-height: 100vh; padding: 120px 20px 60px; background: #fdfcf5; }
+.admin-dashboard-container { width: 100%; max-width: 1100px; margin: auto; }
+.admin-dashboard-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 40px; }
+.admin-dashboard-header h2 { color: #0d2e1a; margin: 10px 0; }
+.admin-dashboard-header p { color: #777; }
+.admin-logout-btn { padding: 12px 22px; border: none; border-radius: 6px; background: #0d2e1a; color: white; font-weight: bold; cursor: pointer; }
+.admin-logout-btn:hover { background: #c9a227; color: #0d2e1a; }
+.admin-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 50px; }
+.admin-stat-card { padding: 30px; background: white; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.admin-stat-card span { font-size: 30px; }
+.admin-stat-card h3 { margin: 15px 0 8px; color: #0d2e1a; }
+.admin-stat-card strong { font-size: 30px; color: #c9a227; }
+.admin-students h2 { color: #0d2e1a; margin-bottom: 20px; }
+.students-table { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.student-row { display: grid; grid-template-columns: 1fr 1fr 150px; gap: 20px; padding: 18px 20px; border-bottom: 1px solid #eee; }
+.student-heading { background: #0d2e1a; color: white; font-weight: bold; }
+.student-row:last-child { border-bottom: none; }
+.student-row span { color: #555; }
+.student-heading span { color: white; }
+
+@media (max-width: 768px) { .admin-dashboard-section { padding: 100px 15px 40px; } .admin-dashboard-header { flex-direction: column; align-items: flex-start; } .admin-stats { grid-template-columns: 1fr; } .student-row { grid-template-columns: 1fr; gap: 8px; } .student-heading { display: none; } }
+
+/* =========================
+   COURSE MANAGEMENT
+   ========================= */
+.admin-courses { margin-top: 50px; }
+.admin-courses h2 { color: #0d2e1a; margin-bottom: 20px; }
+.admin-course-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.admin-course-card { padding: 25px; background: white; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); transition: 0.3s ease; }
+.admin-course-card:hover { transform: translateY(-5px); }
+.admin-course-card h3 { color: #0d2e1a; margin-bottom: 10px; }
+.admin-course-card p { color: #777; line-height: 1.6; margin-bottom: 15px; }
+.admin-course-card span { color: #c9a227; font-weight: bold; }
+@media (max-width: 768px) { .admin-course-list { grid-template-columns: 1fr; } }
+
+/* =========================
+   ADD COURSE: Css da courses din da za a kara adding.
+   ========================= */
+.add-course-box { margin-top: 35px; padding: 25px; background: white; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.add-course-box h3 { color: #0d2e1a; margin-bottom: 20px; }
+#add-course-form { display: grid; gap: 15px; }
+#add-course-form input { width: 100%; padding: 13px; border: 1px solid #ddd; border-radius: 6px; outline: none; box-sizing: border-box; }
+#add-course-form input:focus { border-color: #c9a227; }
+#course-message { margin-top: 15px; color: #0d2e1a; font-weight: bold; }
+
+/* =========================
+   COURSE ACTIONS: css na delete button. 
+   ========================= */
+.course-actions { margin-top: 20px; }
+.delete-course-btn { padding: 10px 16px; border: none; border-radius: 6px; background: #b00020; color: white; font-weight: bold; cursor: pointer; }
+.delete-course-btn:hover { background: #800018; }
+
+/* =========================
+   STUDENT SEARCH: nemo ɗalibi ta suna ko email.
+   ========================= */
+.student-search { margin-bottom: 20px; }
+#student-search { width: 100%; max-width: 500px; padding: 13px; border: 1px solid #ddd; border-radius: 6px; outline: none; box-sizing: border-box; }
+#student-search:focus { border-color: #c9a227; }
+
+/* =========================
+   DELETE STUDENT BUTTON
+   ========================= */
+.delete-student-btn { margin-left: 10px; padding: 7px 12px; border: none; border-radius: 5px; background: #b00020; color: white; font-weight: bold; cursor: pointer; }
+.delete-student-btn:hover { background: #800018; }
+
+/* =========================
+   EDIT STUDENT BUTTON
+   ========================= */
+.edit-student-btn { margin-left: 10px; padding: 7px 12px; border: none; border-radius: 5px; background: #c9a227; color: #0d2e1a; font-weight: bold; cursor: pointer; }
+.edit-student-btn:hover { background: #0d2e1a; color: white; }
+
+/* =========================
+   VIEW STUDENT BUTTON
+   ========================= */
+
+.view-student-btn { margin-left: 10px; padding: 7px 12px; border: none; border-radius: 5px; background: #0d2e1a; color: white; font-weight: bold; cursor: pointer; }
+.view-student-btn:hover { background: #c9a227; color: #0d2e1a; }
+
+/* =========================
+   STUDENT DETAILS
+   ========================= */
+.student-details { margin-top: 30px; }
+.student-details-card { padding: 25px; background: white; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.student-details-card h3 { color: #0d2e1a; margin-bottom: 15px; }
+.student-details-card p { color: #555; margin: 8px 0; }
+
